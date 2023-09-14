@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.satislar">
+   <children>
+      <AnchorPane minHeight="800.0" minWidth="600.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: BLACK;">
+         <children>
+            <Label fx:id="lbl_satışlarımız" layoutX="201.0" layoutY="48.0" text="SATIŞLARIMIZ" textFill="#ff0e0e">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableV_satışlarımız" layoutX="50.0" layoutY="135.0" prefHeight="314.0" prefWidth="500.0" style="-fx-background-color: YELLOW;">
+              <columns>
+                <TableColumn fx:id="tableC_ürünadı" onEditStart="#tableC_ürünadı_click" prefWidth="100.80001068115234" text="ÜRÜN_ADI" />
+                <TableColumn fx:id="tableC_alışfiyatı" onEditStart="#tableC_alışfiyatı_click" prefWidth="83.20001220703125" text="ALIŞ FİYATI" />
+                  <TableColumn fx:id="tableC_satışfiyatı" onEditStart="#tableC_satışfiyatı_click" prefWidth="108.0" text="SATIŞ FİYATI" />
+                  <TableColumn fx:id="tableC_adet" onEditStart="#tableC_adet_click" prefWidth="97.5999755859375" text="ADET" />
+                  <TableColumn fx:id="tableC_tutar" onEditStart="#tableC_tutar_click" prefWidth="111.20010375976562" text="TUTAR" />
+              </columns>
+            </TableView>
+            <AnchorPane layoutX="-6.0" layoutY="498.0" prefHeight="306.0" prefWidth="607.0">
+               <children>
+                  <Button fx:id="btn_ekle" layoutX="405.0" layoutY="38.0" mnemonicParsing="false" onAction="#btn_ekle_click" prefHeight="60.0" prefWidth="108.0" style="-fx-background-color: BLUE;" text="EKLE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_güncelle" layoutX="405.0" layoutY="123.0" mnemonicParsing="false" onAction="#btn_güncelle_click" prefHeight="60.0" prefWidth="108.0" style="-fx-background-color: GREEN;" text="GÜNCELLE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_sil" layoutX="405.0" layoutY="213.0" mnemonicParsing="false" onAction="#btn_sil_click" prefHeight="60.0" prefWidth="108.0" style="-fx-background-color: RED;" text="SİL">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txt_alışfiyatı" layoutX="97.0" layoutY="78.0" promptText="alış_fiyatı" />
+                  <TextField fx:id="txt_satışfiyatı" layoutX="98.0" layoutY="128.0" promptText="satış_fiyatı" />
+                  <Button fx:id="btn_göster" layoutX="268.0" layoutY="229.0" mnemonicParsing="false" onAction="#btn_göster" prefHeight="43.0" prefWidth="70.0" style="-fx-background-color: orange;" text="göster" />
+                  <TextField fx:id="txt_adet" layoutX="98.0" layoutY="183.0" promptText="adet" />
+                  <TextField fx:id="txt_ürünadı" layoutX="98.0" layoutY="25.0" promptText="ürün_adı" />
+                  <TextField fx:id="txt_tutar" layoutX="97.0" layoutY="238.0" promptText="turar" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ıletsm">
+   <children>
+      <AnchorPane layoutX="-5.0" minHeight="800.0" minWidth="600.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
+         <children>
+            <Label fx:id="lbl_iltsm" layoutX="109.0" layoutY="45.0" text="İLETİŞİM BİLGİLERİMİZ" textFill="#ff0a0a">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_tel" layoutX="50.0" layoutY="152.0" text="TEL:  05457389200" textFill="#bdea0a">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_posta" layoutX="48.0" layoutY="199.0" text="E POSTA:  dogankasap47@gmail.com" textFill="#a7fa0e">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_instegram" layoutX="48.0" layoutY="250.0" text="İNSTAGRAM:  dogan_kasap47" textFill="#aaf415">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_adres" layoutX="48.0" layoutY="303.0" text="ADRES:  meydan mah. 643 sk. no=15  DARGEÇİT/MARDİN" textFill="#aaff00">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="-2.0" layoutY="349.0" prefHeight="454.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="txt_deger1" layoutX="101.0" layoutY="117.0" promptText="xxxxxxxxxxxxxxx" />
+                  <TextField fx:id="txt_deger2" layoutX="102.0" layoutY="186.0" promptText="xxxxxxxxxxxxxxxxx" />
+                  <Button fx:id="btn_sil" layoutX="450.0" layoutY="277.0" mnemonicParsing="false" onAction="#btn_sil_click" prefHeight="55.0" prefWidth="106.0" style="-fx-background-color: RED;" text="SİL">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_göster" layoutX="85.0" layoutY="263.0" mnemonicParsing="false" onAction="#btn_göster_click" prefHeight="55.0" prefWidth="83.0" style="-fx-background-color: ORANGE;" text="göster" />
+                  <Button fx:id="btn_güncelle" layoutX="450.0" layoutY="184.0" mnemonicParsing="false" onAction="#btn_cgüncelle_click" prefHeight="55.0" prefWidth="106.0" style="-fx-background-color: GREEN;" text="GÜNCELLE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_ekle" layoutX="450.0" layoutY="102.0" mnemonicParsing="false" onAction="#btn_ekle_click" prefHeight="55.0" prefWidth="106.0" style="-fx-background-color: BLUE;" text="EKLE" textFill="#030303">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

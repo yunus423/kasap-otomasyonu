@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.et_cstleri">
+   <children>
+      <AnchorPane minHeight="800.0" minWidth="600.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
+         <children>
+            <Label fx:id="lbl_oto" layoutX="233.0" layoutY="31.0" text="ET ÇEŞİTLERİ" textFill="#ff0e0e">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tabloV_çşt" layoutX="53.0" layoutY="103.0" onMouseClicked="#tableClick" prefHeight="338.0" prefWidth="435.0" style="-fx-background-color: yellow;">
+              <columns>
+                <TableColumn fx:id="tableC_hayvan" onEditStart="#tableC_hayvan" prefWidth="75.0" text="hayvan" />
+                <TableColumn fx:id="tableC_et" onEditStart="#tableC_et" prefWidth="75.0" text="et" />
+                  <TableColumn fx:id="tableC_olg" onEditStart="#tableC_olg" prefWidth="75.0" text="olgunluk" />
+                  <TableColumn fx:id="tableC_yapı" onEditStart="#tableC_yapı" prefWidth="75.0" text="yapı" />
+                  <TableColumn fx:id="tableC_kg" onEditStart="#tableC_kg" prefWidth="75.0" text="kg" />
+                  <TableColumn fx:id="tableC_fyt" onEditStart="#tableC_fyt" prefWidth="75.0" text="fiyat" />
+              </columns>
+            </TableView>
+            <AnchorPane layoutX="-5.0" layoutY="447.0" prefHeight="270.0" prefWidth="610.0">
+               <children>
+                  <TextField fx:id="text_deger1" layoutX="28.0" layoutY="40.0" promptText="et" />
+                  <TextField fx:id="txt_deger2" layoutX="28.0" layoutY="89.0" promptText="olgunluk" />
+                  <Button fx:id="btn_ekle" layoutX="449.0" layoutY="24.0" mnemonicParsing="false" onAction="#btn_ekle_click" prefHeight="58.0" prefWidth="78.0" style="-fx-background-color: blue;" text="ekle" />
+                  <Button fx:id="btn_güncelle" layoutX="450.0" layoutY="102.0" mnemonicParsing="false" onAction="#btn_güncelle_click" prefHeight="58.0" prefWidth="77.0" style="-fx-background-color: green;" text="GÜNCELLE" />
+                  <Button fx:id="btn_sil" layoutX="449.0" layoutY="180.0" mnemonicParsing="false" onAction="#btn_sil_click" prefHeight="58.0" prefWidth="78.0" style="-fx-background-color: RED;" text="SİL" />
+                  <Button fx:id="btn_göster" layoutX="210.0" layoutY="209.0" mnemonicParsing="false" onAction="#btn_göster" prefHeight="47.0" prefWidth="78.0" style="-fx-background-color: orange;" text="göster">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="text_deger3" layoutX="28.0" layoutY="135.0" promptText="yapı" />
+                  <TextField fx:id="txt_deger4" layoutX="28.0" layoutY="1.0" promptText="hayvan" />
+                  <TextField fx:id="text_deger5" layoutX="28.0" layoutY="180.0" promptText="kg" />
+                  <TextField fx:id="text_deger6" layoutX="28.0" layoutY="225.0" promptText="fiyat" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

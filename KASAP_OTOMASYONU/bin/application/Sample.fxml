@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: turquoise;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <Label fx:id="lbl_kasap" layoutX="60.0" layoutY="79.0" onDragDetected="#l" text="DOĞAN KASAB'A HOŞGELDİNİZ">
+         <font>
+            <Font size="33.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.13131046295166016" green="0.05999999865889549" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="txt1" layoutX="242.0" layoutY="201.0" promptText="e postayı giriniz" text="yunus47@iste.edu.tr" />
+      <TextField fx:id="txt2" layoutX="242.0" layoutY="253.0" promptText="şifrenizi giriniz" text="mardin47" />
+      <Label fx:id="lb1" layoutX="150.0" layoutY="205.0" text="E POSTA" />
+      <Label fx:id="lb2" layoutX="150.0" layoutY="257.0" text="ŞİFRE" />
+      <Label fx:id="lbl_sfrunt" layoutX="123.0" layoutY="327.0" text="şifrenizimi unuttunuz?" textFill="#dc0404">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Button fx:id="btn_login" layoutX="433.0" layoutY="321.0" mnemonicParsing="false" onAction="#login_click" prefHeight="54.0" prefWidth="79.0" style="-fx-background-color: green;" text="login" textFill="WHITE" />
+      <Button fx:id="temizlebuton" layoutX="339.0" layoutY="321.0" mnemonicParsing="false" onAction="#temizle_click" prefHeight="54.0" prefWidth="71.0" style="-fx-background-color: red;" text="temizle" textFill="WHITE" />
+      <TextArea fx:id="textarea" layoutX="45.0" layoutY="390.0" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

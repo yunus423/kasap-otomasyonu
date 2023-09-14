@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.departmanlar">
+   <children>
+      <AnchorPane fx:id="btn_sil" layoutX="-7.0" minHeight="800.0" minWidth="600.0" onDragDetected="#btn_sil_click" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: BLACK;">
+         <children>
+            <Label fx:id="lbl_departman" layoutX="194.0" layoutY="38.0" text="DEPARTMANLAR" textFill="#ff1111">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableV_departman" layoutX="106.0" layoutY="127.0" prefHeight="200.0" prefWidth="370.0" style="-fx-background-color: YELLOW;">
+              <columns>
+                <TableColumn fx:id="tableC_id" onEditStart="#tableC_id_click" prefWidth="75.0" text="İD" />
+                <TableColumn fx:id="table_ad" onEditStart="#table_ad_click" prefWidth="109.60003662109375" text="DEPARTMAN AD" />
+                  <TableColumn fx:id="table_işcisys" onEditStart="#table_işcisys_click" prefWidth="181.59991455078125" text="ÇALIŞAN İŞÇİ SAYISI" />
+              </columns>
+            </TableView>
+            <AnchorPane layoutX="3.0" layoutY="418.0" prefHeight="390.0" prefWidth="593.0">
+               <children>
+                  <Button fx:id="btn_ekle" layoutX="448.0" layoutY="62.0" mnemonicParsing="false" onAction="#btn_ekle_click" prefHeight="59.0" prefWidth="92.0" style="-fx-background-color: BLUE;" text="EKLE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_güncelle" layoutX="448.0" layoutY="239.0" mnemonicParsing="false" onAction="#btn_güncelle_click" prefHeight="59.0" prefWidth="92.0" style="-fx-background-color: GREEN;" text="GÜNCELLE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txt_id" layoutX="105.0" layoutY="109.0" promptText="id" />
+                  <TextField fx:id="txt_ad" layoutX="106.0" layoutY="160.0" promptText="departman_ad" />
+                  <Button fx:id="btn_göster" layoutX="248.0" layoutY="269.0" mnemonicParsing="false" onAction="#btn_göster_click" prefHeight="40.0" prefWidth="83.0" style="-fx-background-color: orange;" text="göster" />
+                  <Button fx:id="btn_silme" layoutX="451.0" layoutY="150.0" mnemonicParsing="false" onAction="#btn_silne_click" prefHeight="59.0" prefWidth="92.0" style="-fx-background-color: red;" text="sil">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txt_işci_sys" layoutX="106.0" layoutY="209.0" promptText="departman_işci_sayısı" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

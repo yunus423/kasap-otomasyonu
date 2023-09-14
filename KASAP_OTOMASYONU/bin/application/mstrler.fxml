@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mstrler">
+   <children>
+      <AnchorPane minHeight="800.0" minWidth="600.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: BLACK;">
+         <children>
+            <Label fx:id="lbl_mstrl" layoutX="193.0" layoutY="54.0" text="MÜŞTERİLERİMİZ" textFill="RED">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tabloV_müşteri" layoutX="77.0" layoutY="144.0" prefHeight="332.0" prefWidth="466.0" style="-fx-background-color: YELLOW;">
+              <columns>
+                <TableColumn fx:id="tabloC_id" onEditStart="#tabloC_id_click" prefWidth="75.0" text="İD" />
+                <TableColumn fx:id="tabloC_ad" onEditStart="#tabloC_ad_click" prefWidth="97.5999755859375" text="AD" />
+                  <TableColumn fx:id="tabloC_soyad" onEditStart="#tabloC_soyad_click" prefWidth="87.2000732421875" text="SOYAD" />
+                  <TableColumn fx:id="tabloC_tel" onEditStart="#tabloC_tel_click" prefWidth="101.60003662109375" text="TEL" />
+                  <TableColumn fx:id="tabloC_sonalış" onEditStart="#tabloC_sonalış_click" prefWidth="102.39999999999998" text="SON_ALIŞ" />
+              </columns>
+            </TableView>
+            <AnchorPane layoutX="-4.0" layoutY="476.0" prefHeight="332.0" prefWidth="607.0">
+               <children>
+                  <Button fx:id="btn_sil" layoutX="440.0" layoutY="232.0" mnemonicParsing="false" onAction="#btn_sil_click" prefHeight="71.0" prefWidth="107.0" style="-fx-background-color: RED;" text="SİL">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_güncelle" layoutX="440.0" layoutY="130.0" mnemonicParsing="false" onAction="#btn_güncelle_click" prefHeight="71.0" prefWidth="107.0" style="-fx-background-color: GREEN;" text="GÜNCELLE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_ekle" layoutX="440.0" layoutY="24.0" mnemonicParsing="false" onAction="#btn_ekle_click" prefHeight="71.0" prefWidth="107.0" style="-fx-background-color: BLUE;" text="EKLE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txt_id" layoutX="79.0" layoutY="75.0" promptText="id" />
+                  <TextField fx:id="txt_ad" layoutX="79.0" layoutY="117.0" promptText="ad" />
+                  <Button fx:id="btn_göster" layoutX="271.0" layoutY="256.0" mnemonicParsing="false" onAction="#btn_göster" prefHeight="46.0" prefWidth="82.0" style="-fx-background-color: orange;" text="göster" />
+                  <TextField fx:id="txt_tel" layoutX="79.0" layoutY="213.0" promptText="tel" />
+                  <TextField fx:id="soyad" layoutX="79.0" layoutY="166.0" promptText="soyad" />
+                  <TextField fx:id="txt_sonalıs" layoutX="79.0" layoutY="255.0" promptText="son alış" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
